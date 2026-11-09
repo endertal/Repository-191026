@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <style>
+        #a2 {
+            background-color: grey;
+            border: 2px solid black;
+            width: 200px;
+            padding: 8px;
+            border-radius: 8px
+        }
+        #a3 {
+            display: flex;
+            justify-content: space-around;
+        }
+        h4 {
+            text-align: center;
+            background-color: grey;
+            padding: 8px;
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+        button {
+            background-color: gray;
+            border-radius: 8px;
+            border: 2px solid black;
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
-    <h4 id="a1">JavaScript</h4>
-    <button onclick="coba()">pencet</button>
-    <button onclick="coba2()">pencet</button>
+    <div id="a2">
+        <h4 id="a1">JavaScript</h4>
+        <div id="a3">
+            <button onclick="coba()">pencet</button>
+            <button onclick="coba2()">pencet</button>
+        </div>
+    </div>
+
     <script>
         function coba() {
             const text = "hello world";
