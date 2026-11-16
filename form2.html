@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <style>
+        main {
+            max-width: 400px;
+            margin: 40px;
+            padding: 24px;
+            background: #f3f3f3;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        input, select{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            padding: 12px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Pendaftaran</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Pendaftaran Siswa SMKN 1 Pacitan</h1>
+        </header>
+        <form action="http://rplcoders.com/proses.php" method="post">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required>
+
+            <label for="lahir">Tanggal Lahir</label>
+            <input type="date" id="lahir" name="lahir" required>
+
+            <label for="asal">Asal Sekolah</label>
+            <input type="text" id="asal" name="asal" placeholder="Asal Sekolah" required>
+
+            <label>Jenis Kelamin:</label>
+            <label><input type="radio" name="gender" value="Laki2" required>Laki-laki</label>
+            <label><input type="radio" name="gender" value="Perempuan">Perempuan</label>
+
+            <label for="jurusan">Jurusan</label>
+            <input type="text" id="jurusan" name="jurusan" placeholder="Masukkan Jurusan" required>
+
+            <label for="kota">Kota Domisili</label>
+            <select id="kota" name="kota" required>
+                <option value="" disabled selected>Pilih kota anda</option>
+                <option value="pacitan">Pacitan</option>
+                <option value="wonogiri">Wonogiri</option>
+                <option value="ponorogo">Ponorogo</option>
+            </select>
+
+            <label for="foto">Foto Siswa</label>
+            <input type="file" id="foto" name="foto">
+
+            <label for="Deskripsi">Deskripsi</label>
+            <textarea id="Deskripsi" name="Deskripsi" rows="4" cols="50"></textarea>
+
+            <label><input type="checkbox" id="setuju" name="setuju" required>Anda yakin telah mengisi dengan benar</label>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

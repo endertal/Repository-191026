@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<title>Formulir Pendaftaran Turnamen Minecraft</title>
+<style>
+  body {
+    font-family: Arial;
+    padding: 20px;
+  }
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+  legend {
+    color: white;
+    border: 1px solid black;
+    background-color: #5d9c3f;
+    border-radius: 8px;
+    padding: 6px;
+  }
+  fieldset {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  label {
+    display: block;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  input, select, textarea {
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid black;
+  }
+  button {
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px;
+    background-color: #5d9c3f;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+    <form action="http://rplcoders.com/proses.php" method="post">
+        <h1>Pendaftaran Turnamen Minecraft</h1>
+        <fieldset>
+            <legend>Data Kapten</legend>
+            <label for="kapten">Nama Kapten</label>
+            <input type="text" id="kapten" name="kapten" required>
+
+            <label for="lahir">Tanggal Lahir</label>
+            <input type="date" id="lahir" name="lahir" required>
+
+            <label for="username">Username Minecraft</label>
+            <input type="text" id="username" name="username" required>
+
+            <label>Platform</label>
+            <label><input type="radio" id="java" name="platform" value="Java" required>Java Edition</label>
+            <label><input type="radio" id="bedrock" name="platform" value="Bedrock">Bedrock Edition</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Data Tim</legend>
+            <label for="tim">Nama Tim</label>
+            <input type="text" id="tim" name="tim" required>
+
+            <label for="versi">Versi Minecraft</label>
+            <select id="versi" name="versi" required>
+                <option value="" selected disabled>-- Pilih Versi --</option>
+                <option value="26.3">26.3</option>
+                <option value="26.4">26.4</option>
+                <option value="26.5">26.5</option>
+            </select>
+
+            <label for="anggota">Daftar Anggota</label>
+            <textarea id="anggota" name="anggota" rows="3" placeholder="Nama - Username, satu per baris" required></textarea>
+
+            <label for="logo">Logo tim</label>
+            <input type="file" id="logo" name="logo" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mode &amp; Jadwal</legend>
+
+            <label for="mode">Mode Turnamen</label>
+            <select id="mode" name="mode" required>
+                <option value="" selected disabled>-- Pilih mode --</option>
+                <option value="Survival Games">Survival Games</option>
+                <option value="PvP Duel">PvP Duel</option>
+                <option value="Build Battle">Build Battle</option>
+                <option value="Bed Wars">Bed Wars</option>
+            </select>
+
+            <label>Jadwal Sesi</label>
+            <label><input type="checkbox" id="jadwal-sabtu" name="jadwal" value="Sabtu">Sabtu</label>
+            <label><input type="checkbox" id="jadwal-minggu" name="jadwal" value="Minggu">Minggu</label>
+        </fieldset>
+
+        <label><input type="checkbox" id="setuju" name="setuju" required>Anda yakin telah mengisi formulir dengan benar</label>
+        <button type="submit">Daftar</button>
+    </form>
+</body>
+</html>
